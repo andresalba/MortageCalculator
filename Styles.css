@@ -125,6 +125,11 @@
     border: 1.2px solid rgb(49,110,239);
     box-shadow: 4px 4px 1px rgba(204, 204, 204, 0.5);
 }
+.izq_mandatory{
+    color: red;
+    font-size: 0.7rem;
+    margin-top: 1%;
+}
 
 .der{
     /*background-color: blue;*/
