@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="Styles.css">
+    
+  </head>
+  <header>
+    <h1 class="mainTitle">Mortage Calculator</h1>
+  </header>
+  <body>
+    <div class="cont">
+      <div class="izq">
+
+        <div class="izq_title">
+          <p>Change values to calculate your results</p>
+          <hr class="izq_solid">
+        </div>
+
+        <div class="izq_slider1">
+          <p class="izq_subTitle">Years of mortage</p>
+          <div class="izq_slide">
+            <p style="font-weight: bold;">1</p>
+            <input type="range" min="0" max="40" value="1" class="sliderMain" id="slider1" />
+            <p style="font-weight: bold;">40</p>
+            <p class="izq-selected" id="value1">1</p>
+          </div>
+        </div>
+
+        <div class="izq_slider2">
+          <p class="izq_subTitle">Rate of interest (%)</p>
+          <div class="izq_slide">
+            <p style="font-weight: bold;">0.1</p>
+            <input type="range" min="0" max="10" value="0.1" class="sliderMain" id="slider2" />
+            <p style="font-weight: bold;">10</p>
+            <p class="izq-selected" id="value2">1</p>
+          </div>
+        </div>
+
+        <div class="izq_inp1">
+          <p class="izq_subTitle">Loan Amount</p>
+          <input type="text" name="loan" id="loanInput" class="izq_txt1" />
+        </div>
+
+        <div class="izq_inp2">
+          <div class="izq_tax">
+            <p class="izq_subTitle">Annual tax</p>
+            <input type="text" name="tax" id="taxInput" class="izq_txt2" />
+          </div>
+          <div class="izq_insurance">
+            <p class="izq_subTitle">Annual Insurance</p>
+            <input type="text" name="insurance" id="insuranceInput" class="izq_txt3" />
+          </div>
+        </div>
+
+        <button class="izq_btn" onclick="calculate()">Calculate</button>
+
+      </div>
+      <div class="der">
+        <h2 class="der_title">Your Results</h2>
+        <p class="der_subTitle">Principal & Interest</p>
+        <p  class="der_res">$  <span class="der_res" id="prinOutput">--</span></p>
+        <p class="der_subTitle">Tax</p>
+        <p  class="der_res">$  <span class="der_res" id="taxOutput">--</span></p>
+        <p class="der_subTitle">Insurance</p>
+        <p  class="der_res">$  <span class="der_res" id="insuranceOutput">--</span></p>
+        <hr class="der_solid">
+        <p class="der_subTitle">Total Monthly Payment</p>
+        <p  class="der_res">$  <span class="der_res" id="monthlyOutput">--</span></p>       
+      </div>
+    </div>
+  </body>
+  <script src="Scripts.js"></script>
+</html>
