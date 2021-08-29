@@ -20,6 +20,7 @@
     grid-template-columns: 60% 40%;
 }
 
+
 .izq{
     /*background-color: red;*/
     padding: 5%;
@@ -173,4 +174,16 @@
     border: none;
     border-radius: 50%;
     cursor: pointer;				
+}
+
+@media screen and (max-width: 600px){
+    .cont{
+      display: grid;
+      grid-template-columns: 100%;
+    }	
+    .der{
+        /*background-color: blue;*/
+        padding-left: 5%;
+        padding-top: 5%;
+    }	  
 }
