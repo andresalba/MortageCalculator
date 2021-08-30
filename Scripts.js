@@ -3,6 +3,9 @@ var output1 = document.getElementById("value1");
 var years;
 var interest;
 
+/**
+ * Initialize the Mandatory field texts as display none
+ */
 document.getElementById("mf1").style.display = "none";
 document.getElementById("mf2").style.display = "none";
 document.getElementById("mf3").style.display = "none";
@@ -48,19 +51,19 @@ function calculate(){
     //monthly payment calculation
     document.getElementById("monthlyOutput").innerHTML = (calcPi+calcTax+calcInsur).toFixed(2);
     //error if empthy
-    if(loan > 0){ 
+    if(loan !== ''){ 
         document.getElementById("loanInput").style.borderColor = "#cccccc"; 
         document.getElementById("mf1").style.display = "none";}
     else{ 
         document.getElementById("loanInput").style.borderColor = "red";
         document.getElementById("mf1").style.display = "block";}
-    if(annualTax > 0){
+    if(annualTax !== ''){
         document.getElementById("taxInput").style.borderColor = "#cccccc";
         document.getElementById("mf2").style.display = "none";}        
     else{ 
         document.getElementById("taxInput").style.borderColor = "red";
         document.getElementById("mf2").style.display = "block";}         
-    if(annualInsur > 0){ 
+    if(annualInsur !== ''){ 
         document.getElementById("insuranceInput").style.borderColor = "#cccccc"; 
         document.getElementById("mf3").style.display = "none";}
     else{ 
