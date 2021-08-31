@@ -1,15 +1,19 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'DM Sans', sans-serif;
 }
     header{
-    border-bottom: 5px solid rgb(246,246,246);
+    border-bottom: 5px solid rgb(246,246,246); 
 }
 .mainTitle{
     margin-left: 10vw;
     margin-right: 10vw;
     margin-top: 2vh;
     margin-bottom: 2vh;
+    /*font-family: 'Prata', serif;*/
+    font-family: 'DM Serif Text', serif;
+    font-weight: lighter;
 }
 .cont{
     margin-top: 5vh;
