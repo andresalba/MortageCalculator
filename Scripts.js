@@ -1,4 +1,7 @@
 (() => {
+	/**
+	 * Get access to te elements
+	 */
 	const slider1 = document.getElementById('slider1');
 	const output1 = document.getElementById('value1');
 	const slider2 = document.getElementById('slider2');
@@ -29,6 +32,9 @@
 	slider2.addEventListener('input', slider2Event);
 	calculateButton.addEventListener('click', requestCalculation);
 
+	/**
+	 * Captures the slider value and calculates the amount of blue in the slider's background
+	 */
 	function slider1Event() {
 		years = slider1.value;
 		output1.innerHTML = slider1.value;
@@ -36,6 +42,9 @@
 		slider1.style.background = 'linear-gradient(90deg, rgb(27, 57, 121)' + y + '%, rgb(221, 221, 221)' + y + '%)';
 	}
 
+	/**
+	 * Captures the slider value and calculates the amount of blue in the slider's background
+	 */
 	function slider2Event() {
 		interest = slider2.value;
 		output2.innerHTML = slider2.value;
@@ -43,6 +52,9 @@
 		slider2.style.background = 'linear-gradient(90deg, rgb(27, 57, 121)' + y + '%, rgb(221, 221, 221)' + y + '%)';
 	}
 
+	/**
+	 * Prints in screen the results of the calculations
+	 */
 	function requestCalculation() {
 		const loan = loanInput.value;
 		const annualTax = taxInput.value;
@@ -56,6 +68,13 @@
 		}
 	}
 
+	/**
+	 * Analyzes if the user has filled in the spaces with information and outputs the Mandatory field message in red if he has not done so
+	 * @param {number} loan - The Loan Amount wrote by the user
+	 * @param {number} annualTax - The Annual tax wrote by the user
+	 * @param {number} annualInsur - The Annual Insurance wrote by the user
+	 * @returns {boolean} returns true or false according to the empthy inputs
+	 */
 	function validateForm(loan, annualTax, annualInsur) {
 		let valid = true;
 		if (loan !== '') {
@@ -85,6 +104,13 @@
 		return valid;
 	}
 
+	/**
+	 * Apply the mathematical formulas
+	 * @param {number} loan - The Loan Amount wrote by the user
+	 * @param {number} annualTax - The Annual tax wrote by the user
+	 * @param {number} annualInsur - The Annual Insurance wrote by the user
+	 * @returns {number} returns te requested values
+	 */
 	function calculate(loan, annualTax, annualInsur) {
 		//principle interest calculation
 		let calcPi = ((interest / 100) / 12) * loan / (1 - Math.pow((1 + ((interest / 100) / 12)), -years * 12));
@@ -105,3 +131,4 @@
 		calculate
 	};
 })();
+

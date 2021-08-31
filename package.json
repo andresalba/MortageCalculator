@@ -1,0 +1,24 @@
+{
+  "name": "mortagecalculator",
+  "version": "1.0.0",
+  "description": "MortageCalculator is a technical test created only with HTML, CSS and Javascript.",
+  "main": "Scripts.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --ext .js --ignore-path .gitignore ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andresalba/MortageCalculator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andresalba/MortageCalculator/issues"
+  },
+  "homepage": "https://github.com/andresalba/MortageCalculator#readme"
+}

@@ -4,7 +4,7 @@ MortageCalculator is a technical test created only with HTML, CSS and Javascript
 
 ## Installation
 
-If the project has a package.json file, type in your console npm install.
+Type in your console npm install.
 
 ```bash
 npm install
